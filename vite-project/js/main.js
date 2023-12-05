@@ -31,31 +31,33 @@ function insert(arr) {
 
 insert(spicyFoods)
 
-/*let buttons = document.querySelectorAll(".type-button");
+let buttons = document.querySelectorAll(".type-button");
 buttons.forEach((btn) => btn.addEventListener("click", function(){
   clearcards();
+  let filter = btn.value;
   if (btn == buttons[0]) {
     console.log("0");
     insert(spicyFoods)
   }
   else if (btn == buttons[2]) {
     console.log("btn2");
-    let newarr = spicyFoods.filter((food) => food.scoville < 10000);
+    let newarr = spicyFoods.filter((food) => food.scoville > 10000);
     insert(newarr)
   }
   else if (btn == buttons[3]) {
     console.log("btn3");
-    let newarr = spicyFoods.filter((food) => food.scoville >= 10000);
+    let newarr = spicyFoods.filter((food) => food.scoville <= 10000);
     insert(newarr)
   }
   else {
     console.log("meet");
-    let filter = btn.textContent;
+    console.log(filter);
     let newarr = spicyFoods.filter((food) => food.meat.includes(filter));
     insert(newarr)
   } 
-}));*/
+}));
 
+/*
 function addshrimp() {
   const spicyfoodlist = spicyFoods.filter((spicy) => spicy.meat === "Shrimp")
   insert(spicyfoodlist)
@@ -72,12 +74,12 @@ function addvege() {
 };
 
 function addnotspicy() {
-  const spicyfoodlist = spicyFoods.filter((spicy) => spicy.scoville < 10000)
+  const spicyfoodlist = spicyFoods.filter((spicy) => spicy.scoville <= 10000)
   insert(spicyfoodlist)
 };
 
 function addspicy() {
-  const spicyfoodlist = spicyFoods.filter((spicy) => spicy.scoville >= 10000)
+  const spicyfoodlist = spicyFoods.filter((spicy) => spicy.scoville > 10000)
   insert(spicyfoodlist)
 };
 
@@ -111,4 +113,4 @@ DOMSelectors.hot.addEventListener("click", function() {
 DOMSelectors.nothot.addEventListener("click", function() {
   clearcards();
   addnotspicy();
-});
+});*/
